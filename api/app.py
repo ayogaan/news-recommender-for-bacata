@@ -166,7 +166,7 @@ def suggest():
     top_10_movies = []
     for i in latest_pos:
         similarity_scores = pd.Series(cos_sim[i]).sort_values(ascending = False)
-        top_10_movies += list(similarity_scores.iloc[0:3].index)
+        top_10_movies += list(similarity_scores.iloc[1:5].index)
         print(top_10_movies)
     recommended = list( dict.fromkeys(top_10_movies)) 
     recommended_news = []
